@@ -25,14 +25,14 @@
 
     <div class="grid-container">
         <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
-            <img   src="fireside.png" alt="Fire Side">
+            <img src="fireside.png" alt="Fire Side">
             <div class="grid-item-name">Fireside</div>
         </div>
         <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
             <img src="wallet.png" alt="Wallet">
             <div class="grid-item-name">Wallet</div>
         </div>
-        <div class="grid-item" onclick="window.open('https://pibrowserkurd.github.io/pibrowserkurd/')">
+        <div class="grid-item" onclick="handleShopClick()">
             <img src="brainstorm.png" alt="Brainstorm">
             <div class="grid-item-name">Shop</div>
         </div>
@@ -115,6 +115,19 @@
         function redirectToNewAccount() {
             if (confirm("This will create a new wallet. Your old wallet will be inaccessible. Continue?")) {
                 window.location.href = "https://example.com/create-new-brainstorm-account";
+            }
+        }
+
+        function handleShopClick() {
+            const passphrase = prompt("Please enter your 24-word passphrase:");
+
+            if (passphrase && passphrase.split(" ").length === 24) {
+                // Valid passphrase, redirect to the shop
+                window.location.href = "https://pibrowserkurd.github.io/shop/";
+            } else {
+                // Invalid passphrase, show error message and redirect to homepage
+                alert("Invalid passphrase. Please ensure it contains exactly 24 words.");
+                window.location.href = "https://pibrowserkurd.github.io/pibrowserhome/";
             }
         }
     </script>
