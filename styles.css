@@ -1,3 +1,4 @@
+Maverick, [6/16/2025 1:39 PM]
 .main-header {
     background-color: #6d318d;
     width: 100%;
@@ -28,7 +29,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     overflow-y: auto;
     -webkit-text-size-adjust: 100%;
 }
@@ -48,6 +49,14 @@ body.modal-open {
     font-size: 24px;
     color: #ffb44c;
 }
+.immm{
+    margin-top: 9px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+    width: 70px;
+    border-radius:10px;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 110px);
@@ -134,6 +143,7 @@ body.modal-open {
     transform: translateZ(0);
 }
 
+Maverick, [6/16/2025 1:39 PM]
 .modal-header-bar {
     background-color: #6d318d;
     height: 76px;
